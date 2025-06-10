@@ -83,7 +83,7 @@ namespace MvcDebuggingExam.Controllers
         public IActionResult Delete(int productId)
         {
             var product = products.FirstOrDefault(p => p.Id == productId);
-            if (product != null)
+            if (product == null)
             {
                 products.Remove(product);
             }
